@@ -9,7 +9,7 @@ import {MaxUint256} from "@ethersproject/constants";
             maxClaimable: 50_000,
             price: 0,
             maxClaimablePerWallet: 10,
-            waitInSeconds: 0,
+            waitInSeconds: MaxUint256,
         }]
         await editionDrop.claimConditions.set("0", claimConditions);
         console.log("Succesfully set claim condition");

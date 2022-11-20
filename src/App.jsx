@@ -28,6 +28,15 @@ const App = () => {
     );
   }
 
+  if(hasClaimedNFT){
+    return(
+      <div className="member-page">
+        <h1>DF DOA Member Page</h1>
+        <p>congratulations on being a Dwarf</p>
+      </div>
+    );
+  }
+
   // Render mint nft screen.
   return (
     <div className="mint-nft">
