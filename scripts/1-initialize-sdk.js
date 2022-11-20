@@ -15,10 +15,6 @@ if(!process.env.WALLET_ADDRESS || !process.env.WALLET_ADDRESS === ""){
     console.log("Wallet address not found");
 }
 
-if(process.env.PRIVATE_KEY && process.env.QUICKNODE_API_URL && process.env.WALLET_ADDRESS){
-    console.log("All env variables accounted for");
-} 
-
 const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.PRIVATE_KEY, process.env.QUICKNODE_API_URL
 );
