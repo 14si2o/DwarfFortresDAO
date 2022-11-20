@@ -6,8 +6,8 @@ import { readFileSync } from "fs";
     const editionDrop = await sdk.getContract("0x0a77a4d1dA21b78CaBd5AD8394Fe71a6189792B6", "edition-drop");
     await editionDrop.createBatch([
       {
-        name: "Leaf Village Headband",
-        description: "This NFT will give you access to NarutoDAO!",
+        name: "Dwarf Fortress Key",
+        description: "This NFT will give you access to Dwarf Fortress DAO!",
         image: readFileSync("scripts/assets/dwarfKey.jpeg"),
       },
     ]);

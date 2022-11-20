@@ -5,8 +5,9 @@ const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
   console.log("👋 Address:", address);
+  const editionDropAddress = "0x0a77a4d1dA21b78CaBd5AD8394Fe71a6189792B6";
   // Initialize our Edition Drop contract
-  const { contract: editionDrop } = useContract("0x0a77a4d1dA21b78CaBd5AD8394Fe71a6189792B6", "edition-drop");
+  const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
   // Hook to check if the user has our NFT
   const { data: nftBalance } = useNFTBalance(editionDrop, address, "0")
 
@@ -33,7 +34,7 @@ const App = () => {
       <h1>Mint your free 🍪DAO Membership NFT</h1>
       <div className="btn-hero">
         <Web3Button 
-          contractAddress="0x937dB0C3B07D3C87dD7bEC0146F2c5866b8Cc05c"
+          contractAddress={editionDropAddress}
           action={contract => {
             contract.erc1155.claim(0, 1)
           }}
