@@ -3,7 +3,7 @@ import { readFileSync } from "fs";
 
 (async () => {
   try {
-    const editionDrop = await sdk.getContract("0x0a77a4d1dA21b78CaBd5AD8394Fe71a6189792B6", "edition-drop");
+    const editionDrop = await sdk.getContract("0x937dB0C3B07D3C87dD7bEC0146F2c5866b8Cc05c", "edition-drop");
     await editionDrop.createBatch([
       {
         name: "Dwarf Fortress Key",

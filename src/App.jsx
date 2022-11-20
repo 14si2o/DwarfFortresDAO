@@ -5,7 +5,7 @@ const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
   console.log("👋 Address:", address);
-  const editionDropAddress = "0x0a77a4d1dA21b78CaBd5AD8394Fe71a6189792B6";
+  const editionDropAddress = "0x937dB0C3B07D3C87dD7bEC0146F2c5866b8Cc05c";
   // Initialize our Edition Drop contract
   const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
   // Hook to check if the user has our NFT
