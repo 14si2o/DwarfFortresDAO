@@ -11,11 +11,9 @@ import {MaxUint256} from "@ethersproject/constants";
             maxClaimablePerWallet: 1,
             waitInSeconds: MaxUint256,
         }]
-
         await editionDrop.claimConditions.set("0", claimConditions);
         console.log("Succesfully set claim condition");
     } catch (error) {
         console.log("Failed to set claim condition");
-        
     }
 })();
